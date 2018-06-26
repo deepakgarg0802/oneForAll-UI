@@ -20,7 +20,7 @@
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list li {
   min-height: 100px;
-  max-width: 100%;
+  max-width: 33%;
   padding: 12px 18px 12px;
 }
 #restaurants-list li:hover,:focus{
