@@ -197,18 +197,12 @@ nav h1 a {
   height: 87%;
   position: fixed;
   right: 0;
-  top: 80px;
   width: 50%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
-}
-.inside #footer {
-  bottom: 0;
-  position: absolute;
-  width: 50%;
 }
 #restaurant-name {
   color: #f18200;
