@@ -7,17 +7,14 @@
 .filter-options{
 	display: flex;
 	flex-wrap: wrap;
-	height: 150px;
+	height: 100px;
 }
 .filter-options h2 {
 	padding-top: 15px;
 	width: 100%;
 }
 .filter-options select{
-  width: 80%;
-}
-.filter-options select:focus {
-    max-width: 200px;
+  width: 42%;
 }
 
 /* ====================== Restaurant Listing ====================== */
