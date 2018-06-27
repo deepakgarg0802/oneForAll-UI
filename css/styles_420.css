@@ -16,9 +16,6 @@
 .filter-options select{
   width: 80%;
 }
-.filter-options select:focus {
-    max-width: 200px;
-}
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list li {
