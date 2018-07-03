@@ -37,6 +37,23 @@
     </section>
   </main>
 
+  <!-- Beginning scripts -->
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+      navigator.serviceWorker.register('js/sw.js').then(function (registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+    }
+    else{
+      console.log('ServiceWorker registration failed: ', err);
+    }
+  </script>
+
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxzfjJXaXED2RoCNrW8HtRv7bkHngNP8g&libraries=places&callback=initMap"></script>
