@@ -43,6 +43,8 @@
 }
 #breadcrumb {
     width: 100%;
+    margin-top: 6%;
+    padding: 5% 0px 16px 1%;
 }
 #restaurant-container, #reviews-container {
   padding: 10px 40px 30px;

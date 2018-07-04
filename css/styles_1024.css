@@ -34,7 +34,10 @@
   position: relative;
 }
 #breadcrumb{
-  width: 49%;
+  width: 56%;
+  margin-top: 50px;
+  padding: 10px 0px 16px 1%;
+  text-align: left;
 }
 .inside #map-container{
   width: 43%;
