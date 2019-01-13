@@ -153,17 +153,25 @@ class DBHelper {
     return (`/img/1.jpg`);
   }
 
+  static latlngFromRestaurant(restaurant) {
+    let latlng= new Object();
+    latlng.lat=parseFloat(restaurant.lat);
+    latlng.lng=parseFloat(restaurant.lng);
+    return latlng;
+  }
+
   /**
    * Map marker for a restaurant.
    */
   static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
-      position: restaurant.latlng,
+      position: DBHelper.latlngFromRestaurant(restaurant),
       title: restaurant.name,
       url: DBHelper.urlForRestaurant(restaurant),
       map: map,
       animation: google.maps.Animation.DROP}
     );
+    debugger;
     return marker;
   }
 
