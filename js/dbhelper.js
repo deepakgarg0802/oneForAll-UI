@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8080 // Change this to your server port
-    return `http://localhost:${port}/v1/users`;
+    return `http://localhost:${port}/v1/users/available?loc=7JWVF`;
   }
 
   /**
@@ -60,7 +60,7 @@ class DBHelper {
         callback(error, null);
       } else {
         // Filter restaurants to have only given cuisine type
-        const results = restaurants.filter(r => r.cuisine_type == cuisine);
+        const results = restaurants.filter(r => r.addOn == cuisine);
         callback(null, results);
       }
     });
@@ -171,7 +171,6 @@ class DBHelper {
       map: map,
       animation: google.maps.Animation.DROP}
     );
-    debugger;
     return marker;
   }
 

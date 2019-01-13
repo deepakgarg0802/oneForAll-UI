@@ -10,8 +10,8 @@ window.initMap = () => {
       console.error(error);
     } else {
       self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
+        zoom: 15,
+        center: DBHelper.latlngFromRestaurant(self.restaurant),
         scrollwheel: false
       });
       fillBreadcrumb();
@@ -50,25 +50,25 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
-  name.innerHTML = restaurant.name;
+  name.innerHTML = restaurant.userName;
 
   const address = document.getElementById('restaurant-address');
-  address.innerHTML = restaurant.address;
+  address.innerHTML = restaurant.addOn;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = `Image of ${restaurant.name} Restaurant`;
+  image.alt = `Image of ${restaurant.userName} Restaurant`;
   
   const cuisine = document.getElementById('restaurant-cuisine');
-  cuisine.innerHTML = restaurant.cuisine_type;
-
+  cuisine.innerHTML = restaurant.category;
+  /*
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
   }
   // fill reviews
-  fillReviewsHTML();
+  fillReviewsHTML();*/
 }
 
 /**
@@ -143,7 +143,7 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
+  li.innerHTML = restaurant.userName;
   breadcrumb.appendChild(li);
 }
 
